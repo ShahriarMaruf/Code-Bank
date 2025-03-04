@@ -5,7 +5,6 @@ int main ()
 {
     string S;
    getline(cin,S,'\\');
-
     cout<<S;
     return 0;
 }
