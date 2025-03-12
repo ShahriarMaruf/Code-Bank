@@ -6,10 +6,10 @@ int main ()
     string S;
     int i,n,f;
     cin>>S;
-    n=S.size()-1;
+    n=S.size();
     for (i=n;i>=0;i--)
     {
-        if(S[i]==S[n])
+        if(S[i]==S[n-i-1])
         {
             f=1;
         }
