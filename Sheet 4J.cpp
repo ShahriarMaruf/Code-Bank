@@ -3,24 +3,52 @@
 using namespace std;
 int main ()
 {
-    int c=0;
-    string S;
-    cin>>S;
-    sort(S.begin(),S.end());
-    char x=S[0];
-    for(int i=0;i<=S.size();i++)
+    int n;
+    string S,T;
+    cin>>n;
+    for(int i=0;i<n;i++)
     {
-        if(x==S[i])
+    cin>>S>>T;
+    if(S.size()==T.size())
+    {
+        for(int i=0;i<S.size();i++)
         {
-            c++;
+            cout<<S[i]<<T[i];
         }
-        else
+        cout<<endl;
+    }
+
+    if(S.size()!=T.size())
+    {
+        if(S.size()<T.size())
         {
-            cout<<x<<" : "<<c<<endl;
-            x=S[i];
-            c=1;
+             for(int i=0;i<S.size();i++)
+        {
+            cout<<S[i]<<T[i];
+        }
+           for(int i=S.size();i<=T.size()-1;i++)
+           {
+               cout<<T[i];
+           }
+            cout<<endl;
+        }
+
+         else if(S.size()>T.size())
+        {
+             for(int i=0;i<T.size();i++)
+        {
+            cout<<S[i]<<T[i];
+        }
+           for(int i=T.size();i<=S.size()-1;i++)
+           {
+               cout<<S[i];
+           }
+           cout<<endl;
+
         }
     }
+    }
+
     return 0;
 }
 
